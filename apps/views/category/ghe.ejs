@@ -1,0 +1,98 @@
+<%- include('../header'); -%>
+<section class="best-of-the-week">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-10 col-sm-6">
+                <div class="block">
+                    <div class="line top">
+                        <div>Danh sách ghế</div>
+                    </div>
+                    <form method="post" action="/category/dat-ghe?idsuatchieu=<%= IDSuatChieu %>">
+                        <div class="block-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-10 col-sm-6">
+                                        <ul class="social trp">
+                                            <div class="ad">
+                                                <% for(let i = 65 ; i < 65 + rap.KTDoc; i++) { %>
+                                                    <% let b = String.fromCharCode(i) %>
+                                                    <% for(let j = 1; j <= rap.KTNgang; j++){ %>
+                                                        <% let ghe = b + j %>
+                                                        <% if( j < rap.KTNgang){ %>
+                                                            <% let left = "float:left" %>
+                                                            <% if(arr_Ghe.includes(ghe)){ %>
+                                                            <div data-toggle="buttons" style=<%= left %>>
+                                                                <label for=""
+                                                                       class="btn btn-success yellow btn-outline-primary"
+                                                                       id="btnsoghe">
+                                                                    <!-- mỗi name khác nhau value khác luôn -->
+                                                                    <input type="checkbox" readonly
+                                                                           name="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>"
+                                                                           value="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>">
+                                                                    <%= ghe %>
+                                                                </label>
+
+                                                            </div>
+                                                            <% }else{ %>
+                                                            <div data-toggle="buttons" style=<%= left %>>
+                                                                <label for=""
+                                                                       class="btn btn-success btn-outline-primary"
+                                                                       id="btnsoghe">
+                                                                    <!-- mỗi name khác nhau value khác luôn -->
+                                                                    <input type="checkbox"
+                                                                           name="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>"
+                                                                           value="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>">
+                                                                    <%= ghe %>
+                                                                </label>
+                                                            </div>
+                                                            <% } %>
+                                                        <% }else{ %>
+                                                            <% let left = "" %>
+                                                            <% if(arr_Ghe.includes(ghe)){ %>
+                                                            <div data-toggle="buttons" style=<%= left %>>
+                                                                <label for=""
+                                                                       class="btn btn-success yellow btn-outline-primary"
+                                                                       id="btnsoghe">
+                                                                    <!-- mỗi name khác nhau value khác luôn -->
+                                                                    <input type="checkbox" readonly
+                                                                           name="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>"
+                                                                           value="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>">
+                                                                    <%= ghe %>
+                                                                </label>
+                                                            </div>
+
+                                                            <% }else{ %>
+
+                                                            <div data-toggle="buttons" style=<%= left %>>
+                                                                <label for=""
+                                                                       class="btn btn-success btn-outline-primary"
+                                                                       id="btnsoghe">
+                                                                    <!-- mỗi name khác nhau value khác luôn -->
+                                                                    <input type="checkbox"
+                                                                           name="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>"
+                                                                           value="<%= ghe.substring(0, 1) %>/<%= ghe.substring(1, ghe.length) %>">
+                                                                    <%= ghe %>
+                                                                </label>
+                                                            </div>
+                                                            <% } %>
+                                                        <% } %>
+                                                    <% } %>
+                                                <% } %>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block btndatve">Đặt vé</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<%- include('../footer'); -%>

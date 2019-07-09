@@ -1,0 +1,34 @@
+<%- include('../header'); -%>
+<section class="best-of-the-week">
+    <div class="container">
+        <div class="row">
+            <div class="line">
+                <div>TraiLers</div>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6">
+                <iframe width="560" height="315" src="<%= phims.TraiLers %>" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6 col-xs-6 col-sm-6">
+                <span class="tt"><%= phims.Ten %></span>
+                <hr>
+                <span class="tt">Đạo diễn:&nbsp;&nbsp;&nbsp;&nbsp;<%= phims.DaoDien %></span>
+                <span class="tt">Diễn viên:&nbsp;&nbsp;&nbsp;&nbsp;<%= phims.DienVien %></span>
+                <span class="tt">Thể loại:&nbsp;&nbsp;&nbsp;&nbsp;<%= phims.TheLoai %></span>
+                <span class="tt">Khởi chiếu:&nbsp;&nbsp;&nbsp;&nbsp;<%= phims.NgayCongChieu %></span>
+                <span class="tt">Thời Lượng:&nbsp;&nbsp;&nbsp;&nbsp;<%= phims.ThoiLuong %>&nbsp;&nbsp;Phút</span>
+                <footer>
+                    <a href="#" class="love"><i class="ion-android-favorite-outline ok"></i>
+                        <div>10</div>
+                    </a>
+                    <a class="btn btn-primary more ok1" href="/category/rap?id=<%= phims.id %>">
+                        <div>Mua vé</div>
+                        <div><i class="ion-ios-arrow-thin-right"></i></div>
+                    </a>
+                </footer>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../footer'); -%>

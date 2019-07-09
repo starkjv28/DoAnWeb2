@@ -1,0 +1,54 @@
+<% include layout/header %>
+<!-- End of Topbar -->
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Thống kê</h1>
+
+    <!-- DataTales Example -->
+    <div class="row">
+
+        <div class="col-xl-12 col-lg-10">
+
+            <!-- Area Chart -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                </div>
+                <div class="card-body">
+                    <div class="inputtime">
+                        <form action="admin/insert/thongke" method="POST">
+                            <input type="submit" class="btn btn-primary" value="Thống kê">
+                        </form>
+                    </div>
+
+                    <div class="result">
+                        <div class="rap">Cụm rạp CGV Hùng Vương bán được 2400 vé với doanh thu 500.000.000 VND từ
+                            ngày 01/03/2019 đến 30/04/2019
+                        </div>
+                        <div class="rap">Cụm rạp CGV Hùng Vương bán được 2400 vé với doanh thu 500.000.000 VND từ
+                            ngày 01/03/2019 đến 30/04/2019
+                        </div>
+                        <div class="rap">Cụm rạp CGV Hùng Vương bán được 2400 vé với doanh thu 500.000.000 VND từ
+                            ngày 01/03/2019 đến 30/04/2019
+                        </div>
+                        <div class="rap">Cụm rạp CGV Hùng Vương bán được 2400 vé với doanh thu 500.000.000 VND từ
+                            ngày 01/03/2019 đến 30/04/2019
+                        </div>
+                    </div>
+                    <div class="chart-area">
+                        <canvas id="myAreaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+</div>
+    <!-- Footer -->
+<% include layout/footer %>

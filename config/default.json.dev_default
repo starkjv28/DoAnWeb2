@@ -1,0 +1,19 @@
+{
+    "server":{
+        "host":"0.0.0.0",
+        "port":"3000"
+    },
+    "postgresql_local":{
+        "host":"localhost",
+        "port":"5432",
+        "database":"Lotte_Name",
+        "user":"postgres",
+        "password":"12345678"
+    },
+    "db":{
+        "url": "postgres://owilxpftjjeymn:ff6b644d97d6c0025eefb57233851552eebe6ba7dec7f1eaf7204dafa4acb7a4@ec2-184-73-169-163.compute-1.amazonaws.com:5432/dc1495bi8t89te"
+    },
+    "domain":{
+        "url":"https://megalodoncinema.herokuapp.com/"
+    }
+}

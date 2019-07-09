@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Shareable -->
+
+    <title>Megalodon Cenima</title>
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/static/scripts/bootstrap/bootstrap.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="/static/scripts/ionicons/css/ionicons.min.css">
+    <!-- Toast -->
+    <link rel="stylesheet" href="/static/scripts/toast/jquery.toast.min.css">
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="/static/scripts/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/scripts/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="/static/scripts/magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="/static/scripts/sweetalert/dist/sweetalert.css">
+    <!-- Custom style -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/skins/all.css">
+    <link rel="stylesheet" href="/static/css/demo.css">
+</head>
+
+<body class="skin-orange">
+
+<header class="primary">
+    <div class="fullfooter">
+
+    </div>
+    <div class="firstbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="brand">
+                        <a href="/">
+                            <img src="/static/images/cgvlogo.png" alt="Magz Logo" id="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <form class="search" autocomplete="off">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" name="q" class="form-control" placeholder="Type something here">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary"><i class="ion-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 col-sm-12 text-right">
+                    <ul class="nav-icons">
+                        <% if(!currentUser){ %>
+                            <li><a href="/auth/register"><i class="ion-person-add"></i>
+                                    <div>Đăng ký</div>
+                                </a>
+                            </li>
+                            <li><a href="/auth/login"><i class="ion-person"></i>
+                                    <div>Đăng nhập</div>
+                                </a>
+                            </li>
+                        <% }else{ %>
+                        <li><a href="/auth/profile"><i class="ion-person"></i>
+                                <div><%= currentUser.Name %></div>
+                            </a></li>
+                        <li><a href="/auth/logout"><i class="ion-person-delete"></i>
+                                <div>Đăng xuất</div>
+                            </a></li>
+                        <% } %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start nav -->
+    <nav class="menu hello">
+        <div class="container">
+            <div class="brand">
+                <a href="/">
+                    <img src="/static/images/cgvlogo.png" alt="Magz Logo">
+                </a>
+            </div>
+            <div class="mobile-toggle">
+                <a href="#" data-toggle="menu" data-target="#menu-list"><i class="ion-navicon-round"></i></a>
+            </div>
+            <div class="mobile-toggle">
+                <a href="#" data-toggle="sidebar" data-target="#sidebar"><i class="ion-ios-arrow-left"></i></a>
+            </div>
+            <div id="menu-list">
+                <ul class="nav-list">
+                    <li class="for-tablet nav-title"><a>Menu</a></li>
+                    <li class="dropdown">
+                        <a href="/category/phim">PHIM</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">RẠP CGV<i class="ion-ios-arrow-right"></i></a>
+                    </li>
+                    <li class="dropdown magz-dropdown"><a href="#">THÀNH VIÊN<i class="ion-ios-arrow-right"></i></a>
+                        <ul class="dropdown-menu">
+                            <% if(!currentUser){ %>
+                                <li><a href="/auth/register"><i class="icon ion-heart"></i> Đăng ký</a></li>
+                            <% }else{ %>
+                            <li><a href="/auth/profile?id=<%= currentUser.id %>"><i class="icon ion-person"></i> Tài
+                                    khoản của tôi</a></li>
+                            <% } %>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End nav -->
+</header>

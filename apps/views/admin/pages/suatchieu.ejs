@@ -1,0 +1,65 @@
+<%- include('../layout/header'); -%>
+<!-- End of Topbar -->
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Suất Chiếu <a href="insertsuatchieu" class="btn btn-success btn-circle pull-left">
+            <i>+</i>
+        </a></h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Thời Điểm Bắt Đầu</th>
+                        <th>Thời Điểm Kết Thúc</th>
+                        <th>Giá Vé</th>
+                        <th>Xóa</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th>Thời Điểm Bắt Đầu</th>
+                        <th>Thời Điểm Kết Thúc</th>
+                        <th>Giá Vé</th>
+                        <th>Xóa</th>
+                    </tr>
+
+                    </tfoot>
+                    <tbody>
+                    <% suatchieus.map(item =>{ %>
+                    <tr>
+                        <td><%= item.id %></td>
+                        <td><%= item.ThoiDiemBatDau %></td>
+                        <td><%= item.ThoiDiemKetThuc %></td>
+                        <td><%= item.GiaVe %></td>
+                        <td>
+                            <form method="POST" action="/insert/deletesuatchieu/<%= item.id %>">
+                                <button type="submit" class="btn btn-danger btn-circle btn-sm">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+<%- include('../layout/footer'); -%>

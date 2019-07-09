@@ -1,0 +1,64 @@
+<%- include('../admin/layout/header.ejs'); -%>
+<!-- End of Topbar -->
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Thêm Phim</h1>
+    <div class="row justify-content-center">
+
+        <div class="col-xl-8 col-lg-12 col-md-9">
+            <form class="user" action="/insert/upload" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="Ten"
+                           placeholder="Tên phim...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                           name="NgayCongChieu"
+                           placeholder="Ngày Công Chiếu...">
+                </div>
+                <div class="form-group">
+                    <div class="upload-btn-wrapper">
+                        <button class="btna">Upload ảnh</button>
+                        <input type="file" name="anhphim"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="TraiLers"
+                           placeholder="TraiLer...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="ThoiLuong"
+                           placeholder="Thời Lượng...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="DaoDien"
+                           placeholder="Đạo Diễn...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="DienVien"
+                           placeholder="Diễn Viên...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="TheLoai"
+                           placeholder="Thể Loại...">
+                </div>
+                <input type="submit" class="btn btn-primary" value="Lưu">
+            </form>
+        </div>
+    </div>
+
+    <!-- Page Heading -->
+
+
+    <!-- DataTales Example -->
+
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+<%- include('../admin/layout/footer.ejs'); -%>

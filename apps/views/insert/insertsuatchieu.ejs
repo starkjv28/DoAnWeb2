@@ -1,0 +1,49 @@
+<%- include('../admin/layout/header.ejs'); -%>
+<!-- End of Topbar -->
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <h1 class="h3 mb-2 text-gray-800">Thêm Suất Chiếu</h1>
+    <div class="row justify-content-center">
+
+        <div class="col-xl-8 col-lg-12 col-md-9">
+            <form class="user" action="/insert/insertsuatchieu" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="TDBD"
+                           aria-describedby="emailHelp" placeholder="Thời Điểm Bắt Đầu...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="TDKT"
+                           aria-describedby="emailHelp" placeholder="Thời Điểm Kết Thúc...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="GiaVe"
+                           aria-describedby="emailHelp" placeholder="Giá Vé...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="idrap"
+                           aria-describedby="emailHelp" placeholder="ID Phim...">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" id="exampleInputEmail" name="idphim"
+                           aria-describedby="emailHelp" placeholder="ID Rạp...">
+                </div>
+                <button type="submit" class="btn btn-primary">Lưu</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Page Heading -->
+
+
+<!-- DataTales Example -->
+
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Footer -->
+<%- include('../admin/layout/footer.ejs'); -%>

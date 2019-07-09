@@ -1,0 +1,16 @@
+var config = require("config");
+var Sequelize = require("sequelize");
+var Pool = require("pg");
+
+// var pool = new Pool({
+//     host    : config.get("postgresql_local.host"),
+//     user    : config.get("postgresql_local.user"),
+//     password: config.get("postgresql_local.password"),
+//     database: config.get("postgresql_local.database"),
+//     port    : config.get("postgresql_local.port")
+// })
+var db = config.get("db.url");
+var url = db || 'postgres://postgres:12345678@localhost:5432/Lotte_Name'
+var database = new Sequelize(url);
+
+module.exports = database;

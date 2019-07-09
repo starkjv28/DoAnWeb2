@@ -1,0 +1,39 @@
+<%- include('../header'); -%>
+<section class="login first grey">
+    <div class="container">
+        <div class="box-wrapper">
+            <div class="box box-border">
+                <div class="box-body">
+                    <h4>Đăng nhập</h4>
+                    <% if (err && err.length > 0) { %>
+                        <p style="color:red"> <%= err %></p> <br>
+                    <% } %>
+                    <form method="post" action="/auth/login">
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="Email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="fw">Mật khẩu
+                                <a href="/auth/quen-mat-khau" class="pull-right">Quên mật khẩu?</a>
+                            </label>
+                            <input type="password" name="Password" class="form-control">
+                        </div>
+                        <div class="form-group text-right">
+                            <button class="btn btn-primary btn-block">Đăng nhập</button>
+                        </div>
+                        <div class="form-group text-center">
+                            <span class="text-muted">Không có tài khoản ?</span> <a href="/auth/register">Tạo mới</a>
+                        </div>
+                        <div class="title-line">
+                            hoặc
+                        </div>
+                        <a href="#" class="btn btn-social btn-block facebook"><i class="ion-social-facebook"></i> Đăng
+                            nhập với facebook</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../footer'); -%>
